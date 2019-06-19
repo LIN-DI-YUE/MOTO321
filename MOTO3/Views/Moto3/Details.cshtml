@@ -1,0 +1,42 @@
+﻿@model MOTO3.Models.Moto3
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>詳細資料</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Motoname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motoname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("編輯", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("回首頁", "Index")
+</p>

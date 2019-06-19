@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MOTO3.Models.Moto3>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>HONDA資料庫</h2>
+
+<p>
+    @Html.ActionLink("建置資料", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Motoname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motoname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.ActionLink("編輯", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("詳細資料", "Details", new { id=item.ID }) |
+            @Html.ActionLink("刪除", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
